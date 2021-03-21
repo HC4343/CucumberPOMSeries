@@ -34,6 +34,7 @@ public class LoginPageSteps {
 
 	@Then("forgot your password link should be displayed")
 	public void forgot_your_password_link_should_be_displayed() {
+
 		Assert.assertTrue(loginPage.isForgotPwdLinkExist());
 	}
 

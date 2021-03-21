@@ -14,14 +14,17 @@ public class AccountsPage {
 	private By accountSections = By.cssSelector("div#center_column span");
 
 	public AccountsPage(WebDriver driver) {
+
 		this.driver = driver;
 	}
 	
 	public String getAccountsPageTitle() {
+
 		return driver.getTitle();
 	}
 
 	public int getAccountsSectionCount() {
+
 		return driver.findElements(accountSections).size();
 	}
 
