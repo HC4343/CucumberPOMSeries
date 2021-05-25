@@ -7,16 +7,18 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = {"src/test/resources/AppFeatures"},
-		glue = {"stepdefinitions", "AppHooks"},
-		plugin = {"pretty",
-				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
-				"timeline:test-output-thread/"
 
-				
-		}
-		
-		)
+		plugin = {"pretty",
+				"html:target/default-cucumber-reports",
+				"json:target/json-reports/cucumber.json"
+		},
+		features = "/Users/hakancetin/IdeaProjects/LatestCucumber6WithPOM/src/test/resources/parallel",
+		glue = "parallel",
+		dryRun = false,
+		tags = "@regression"
+
+
+)
 
 public class MyTestRunner {
 
